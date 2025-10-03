@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="e81d63e6-3406-48ca-b91c-84461fd69cff" name="OnlyRaves" url="http://euphorya.net">
+        <fileTransfer rootFolder="/OnlyRaves" accessType="SFTP" host="access-5018719313.webspace-host.com" port="22" sshConfigId="b2b8a411-f7ef-4eaa-9bc6-93a2ce6ed3d6" sshConfig="su85899@access-5018719313.webspace-host.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

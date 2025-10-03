@@ -3,6 +3,13 @@
   <component name="PublishConfigData" serverName="euphorya" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
+      <paths name="OnlyRaves">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/OnlyRaves" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="euphorya">
         <serverdata>
           <mappings>
