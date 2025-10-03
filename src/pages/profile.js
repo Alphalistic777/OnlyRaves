@@ -3,7 +3,7 @@ import { layout } from '../components/layout.js';
 import { supabase } from '../supabase/supabase.js';
 import { getUser } from '../supabase/auth.js';
 
-/* ---------- HTML ---------- */
+/* HTML  */
 export async function profileHTML(errorMsg = '') {
     const user = await getUser();
     if (!user) return '<p>Bitte einloggen.</p>';
@@ -38,7 +38,7 @@ export async function profileHTML(errorMsg = '') {
     </form>`;
 }
 
-/* ---------- Speichern ---------- */
+/* Speichern  */
 export async function profilePOST(body, res) {
     try {
         const user = await getUser();

@@ -1,7 +1,5 @@
 // src/pages/cart.js
-import { layout } from '../components/layout.js';
 import { listCart, removeFromCart } from '../supabase/cart.js';
-import { getUser } from '../supabase/auth.js';
 
 /* ---------- Warenkorb → HTML ---------- */
 export function cartHTML(items) {
@@ -29,3 +27,4 @@ export async function cartRemovePOST(body, res) {
     await removeFromCart(Number(body.cart_id));
     res.writeHead(302, { Location: '/cart' }).end();
 }
+

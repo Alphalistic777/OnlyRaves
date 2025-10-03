@@ -1,7 +1,7 @@
 export function header(authState = {}) {
     const { user, active = '' } = authState;
 
-    // Nav-Punkte (Profil raus)
+    // Nav-Punkte (Profil)
     const navItems = [
         { url: '/raves',  label: 'Raves' },
         { url: '/cart',   label: 'Warenkorb' },
@@ -19,7 +19,7 @@ export function header(authState = {}) {
 
     return `
     <header>
-      <div class="logo">oknow</div>
+      <div class="logo">OnlyFcknRaves</div>
       <nav><ul>${nav}</ul></nav>
       <div class="auth">${auth}</div>
     </header>`;

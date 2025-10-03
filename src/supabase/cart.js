@@ -18,7 +18,7 @@ export async function listCart() {
 
     const { data, error } = await supabase
         .from('r_cart')
-        // JOIN zu Rave + Genre + Address
+        // joiner
         .select(`
       cart_id,
       rave: rave_id (

@@ -3,7 +3,7 @@ import { layout } from '../components/layout.js';
 import { supabase } from '../supabase/supabase.js';
 import { getUser } from '../supabase/auth.js';
 
-/* ---------- HTML ---------- */
+/* HTML */
 export async function createRaveHTML(errorMsg = '', genres = [], addresses = []) {
     const genreOptions = genres.map(g => `<option value="${g.genre_id}">${g.genre_name}</option>`).join('');
     const addressOptions = addresses.map(a =>
@@ -36,7 +36,7 @@ export async function createRaveHTML(errorMsg = '', genres = [], addresses = [])
     </form>`;
 }
 
-/* ---------- Daten laden ---------- */
+/* Daten laden  */
 async function getGenres() {
     const { data, error } = await supabase.from('r_genre').select('*').order('genre_name');
     return error ? [] : data;
@@ -46,7 +46,7 @@ async function getAddresses() {
     return error ? [] : data;
 }
 
-/* ---------- POST ---------- */
+/*  POST  */
 export async function createRavePOST(body, res) {
     try {
         const user = await getUser();

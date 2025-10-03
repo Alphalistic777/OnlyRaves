@@ -1,10 +1,9 @@
 import { header } from './header.js';
 
-// Wrapper für jede Seite – übergibt:
-// - bodyHTML   : <main>-Inhalt
-// - authState  : { user: {...}, active: '/path' } (optional)
+// Wrapper für jede seite
 export function layout(bodyHTML, authState = {}){
     return `<!DOCTYPE html>
+
 <html lang="de">
 <head>
   <meta charset="UTF-8"/>
@@ -16,7 +15,7 @@ export function layout(bodyHTML, authState = {}){
 <body>
   ${header(authState)}
   <main class="content">${bodyHTML}</main>
-  <footer>© 2025 oknow – all night long</footer>
+  <footer>© 2025 OnlyRaves – Only for the Fans</footer>
 </body>
 </html>`;
 }

@@ -6,7 +6,7 @@ import { dirname, join } from 'node:path';
 import { supabase } from './supabase/supabase.js';
 import { layout } from './components/layout.js';
 
-// Page-Helper
+// helper
 import { loginHTML, loginPOST } from './pages/login.js';
 import { registerHTML, registerPOST } from './pages/register.js';
 import { profileHTML, profilePOST } from './pages/profile.js';
@@ -14,27 +14,27 @@ import { cartHTML } from './pages/cart.js';
 import { getRaves, ravesToHTML } from './pages/raves.js';
 import { createRaveHTML, createRavePOST } from './pages/createRave.js';
 
-// Auth & Cart
+// Auth und Cart
 import { getUser, logout } from './supabase/auth.js';
 import { listCart, addToCart, removeFromCart } from './supabase/cart.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PORT = process.env.PORT || 3000;
 
-/* ---------- body parser ---------- */
+/*  body parser  */
 async function parseBody(req) {
     const chunks = [];
     for await (const chunk of req) chunks.push(chunk);
     return Object.fromEntries(new URLSearchParams(Buffer.concat(chunks).toString()));
 }
 
-/* ---------- CSS ---------- */
+/* css */
 const cssHandler = (fileName, res) => {
     res.writeHead(200, { 'Content-Type': 'text/css' });
     res.end(readFileSync(join(__dirname, 'main', fileName), 'utf-8'));
 };
 
-/* ---------- Promoter-Helper ---------- */
+/* peromoter helper */
 async function getGenres() {
     const { data, error } = await supabase.from('r_genre').select('*').order('genre_name');
     return error ? [] : data;
@@ -44,7 +44,7 @@ async function getAddresses() {
     return error ? [] : data;
 }
 
-/* ---------- Router ---------- */
+/* router */
 const router = async (req, res) => {
     if (req.url === '/main/styles.css') return cssHandler('styles.css', res);
     if (req.url === '/main/layout.css') return cssHandler('layout.css', res);
@@ -65,7 +65,7 @@ const router = async (req, res) => {
                 break;
             }
 
-            /* ---------- AUTH ---------- */
+            /* auth */
             case 'GET /login': {
                 const html = layout(loginHTML(), authState('Login', '/login'));
                 res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }).end(html);
@@ -93,7 +93,7 @@ const router = async (req, res) => {
                 break;
             }
 
-            /* ---------- PROFILE ---------- */
+            /* -profile */
             case 'GET /profile': {
                 if (!user) return res.writeHead(302, { Location: '/login' }).end();
                 const html = layout(await profileHTML(), authState('Profil', '/profile'));
@@ -107,7 +107,7 @@ const router = async (req, res) => {
                 break;
             }
 
-            /* ---------- CART ---------- */
+            /* cart */
             case 'GET /cart': {
                 if (!user) return res.writeHead(302, { Location: '/login' }).end();
                 const items = await listCart();
@@ -130,7 +130,7 @@ const router = async (req, res) => {
                 break;
             }
 
-            /* ---------- CREATE RAVE (nur Promoter) ---------- */
+            /* create rave (nur promoter) */
             case 'GET /create-rave': {
                 if (!user || !user.promoter) return res.writeHead(403).end('Forbidden');
                 const genres = await getGenres();

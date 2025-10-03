@@ -1,4 +1,4 @@
-/* ====== LAYOUT & HEADER ====== */
+/* Layout und Header */
 :root{
     --neon: #ff00cc;
     --cyan: #00ffff;
@@ -17,7 +17,7 @@ body{
     flex-direction: column;
 }
 
-/* ---------- Header ---------- */
+/* Header */
 header{
     background: var(--surface);
     border-bottom: 2px solid var(--neon);

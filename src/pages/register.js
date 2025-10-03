@@ -2,7 +2,7 @@
 import { layout } from '../components/layout.js';
 import { supabase } from '../supabase/supabase.js';
 
-/* ---------- HTML ---------- */
+/*  HTML  */
 export function registerHTML(errorMsg = '', genres = []) {
     const promoterOptions = `
     <label>
@@ -29,7 +29,7 @@ export function registerHTML(errorMsg = '', genres = []) {
     <p>Bereits registriert? <a href="/login">Zum Login</a></p>`;
 }
 
-/* ---------- Auth + Profil sofort anlegen ---------- */
+/*  Auth + Profil anlegen supabase */
 export async function registerPOST(body, res) {
     try {
         // 1. Supabase Auth anlegen
@@ -39,7 +39,7 @@ export async function registerPOST(body, res) {
         });
         if (signUpError) throw signUpError;
 
-        // 2. Sofort Public-Profil einfügen
+        // 2.  Public-Profil einfügen
         const user = authData.user;
         const { error: dbError } = await supabase.from('r_user').insert({
             user_id: user.id,
@@ -50,7 +50,7 @@ export async function registerPOST(body, res) {
         });
         if (dbError) throw dbError;
 
-        // 3. Weiterleiten → Login
+        // 3. Weiterleiten zu Login
         res.writeHead(302, { Location: '/login' }).end();
     } catch (err) {
         const html = layout(registerHTML(err.message), { title: 'Registrierung', active: '/register' });

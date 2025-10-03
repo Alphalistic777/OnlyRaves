@@ -1,8 +1,8 @@
 // src/pages/raves.js
 import { supabase } from '../supabase/supabase.js';
-import { addToCart } from '../supabase/cart.js';
 
-/* ---------- Raves von Supabase ---------- */
+
+/*  Raves von Supabase  */
 export async function getRaves() {
     const { data, error } = await supabase
         .from('r_rave')
@@ -16,7 +16,7 @@ export async function getRaves() {
     return data;
 }
 
-/* ---------- Raves → HTML + Warenkorb-Button ---------- */
+/*  Warenkorb-Button  */
 export function ravesToHTML(raves) {
     if (!raves.length) return '<p>Keine Raves gefunden.</p>';
 

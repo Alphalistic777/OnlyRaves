@@ -1,7 +1,7 @@
 // src/supabase/auth.js
 import { supabase } from './supabase.js';
 
-/* ------------------  helpers  ------------------ */
+/* helper */
 export async function register({ email, password, firstName, lastName, age }) {
     // 1. create auth user
     const { data: authData, error: signUpError } = await supabase.auth.signUp({
@@ -12,7 +12,7 @@ export async function register({ email, password, firstName, lastName, age }) {
     });
     if (signUpError) throw signUpError;
 
-    // 2. create public profile row (r_user)
+    // 2. create profile row (r_user)
     const user = authData.user;
     const { error: dbError } = await supabase.from('r_user').insert({
         user_id: user.id,
@@ -41,7 +41,7 @@ export async function getUser() {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return null;
 
-    // optional: public profile fields mitliefern
+    //  public profile fields mitliefern... noch optional
     const { data: profile } = await supabase
         .from('r_user')
         .select('first_name, last_name, age, promoter')
