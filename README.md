@@ -118,7 +118,7 @@ src/
 ### Warenkorb
 - Raves hinzufügen/entfernen
 - Preiskalkulation mit Servicegebühren
-- Checkout-Prozess (Mock)
+- Checkout-Prozess (funktioniert nicht, in planung)
 
 ### Promoter Features
 - Eigene Raves erstellen
