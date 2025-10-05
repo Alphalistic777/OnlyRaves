@@ -96,9 +96,9 @@ src/
 ## Design System
 
 ### Farben
-- **Rainbow Palette**: `#FF006E`, `#FB5607`, `#FFBE0B`, `#8338EC`, `#3A86FF`
-- **Neon Colors**: Pink, Purple, Blue, Green, Yellow
-- **Dark Theme**: `#0A0A0A`, `#1A1A1A`, `#2A2A2A`, `#3A3A3A`
+- **Rainbow Palette**
+- **Neon Colors**
+- **Dark Theme**
 
 ### Komponenten
 - **Glass Card**: `className="glass-card"`
