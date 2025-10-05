@@ -126,11 +126,6 @@ src/
 - Preiskalkulation mit Servicegebühren
 - Checkout-Prozess (funktioniert nicht, in planung)
 
-### Promoter Features
-- Eigene Raves erstellen
-- Events bearbeiten/löschen
-- Übersicht aller eigenen Events
-
 ## Deployment
 
 Funktionierendes deployment auf http://euphorya.net (https sicherheit kommt noch)
