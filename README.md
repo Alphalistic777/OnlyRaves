@@ -127,11 +127,10 @@ src/
 - Checkout-Prozess (funktioniert nicht, in planung)
 
 ## Deployment
+- Funktionierendes deployment auf http://euphorya.net (https sicherheit kommt noch)
+- Auch die Seite funktioniert mit der angebundenen Supabase Datenbank.
 
-Funktionierendes deployment auf http://euphorya.net (https sicherheit kommt noch)
-Auch die Seite funktioniert mit der angebundenen Supabase Datenbank.
-
-/dist Ornder zum anbinden der Website
+- /dist Ornder zum anbinden der Website
 
 ## Entwicklung
 
