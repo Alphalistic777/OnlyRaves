@@ -127,13 +127,7 @@ src/
 
 ## Deployment
 
-Die App kann einfach auf Vercel, Netlify oder einem anderen Hosting-Service deployed werden:
-
-```bash
-npm run build
-```
-
-Der Build-Ordner kann dann deployed werden.
+Funktionierendes deployment auf http://euphorya.net (https sicherheit kommt noch)
 
 ## Entwicklung
 
