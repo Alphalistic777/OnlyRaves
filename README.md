@@ -14,7 +14,7 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 - **Schnelle Performance** - Mit Vite und React
 - **Funktionierendes deployment auf http://euphorya.net**
 
-- **Einige designs/router müssen noch angepasst werden, aber basis läuft**
+- **_Einige designs/router müssen noch angepasst werden, aber basis läuft_**
 
 ## Tech Stack
 
