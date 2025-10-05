@@ -1,4 +1,4 @@
-# OnlyRaves 
+# OnlyRaves - Next-gen Ticket-Buchungsseite
 
 Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 
@@ -27,16 +27,19 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 ## Installation
 
 1. Repository klonen:
-```bash
+
+```
 git clone https://github.com/Alphalistic777/OnlyRaves
+```
 
 2. Dependencies installieren:
-```bash
+
+```
 npm install
 ```
 
 3. Development Server starten:
-```bash
+```
 npm run dev
 ```
 
