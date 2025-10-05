@@ -1,18 +1,18 @@
-# OnlyRaves - Next-gen Ticket-Buchungsseite
+# OnlyRaves 
 
 Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 
 ## Features
 
-- 🌈 **Rainbow Design** - Bunte premium Visuals
-- 🔐 **Authentication** - Login/Register mit Supabase Auth
-- 🎵 **Rave Discovery** - Entdecke und filtere Events
-- 🛒 **Warenkorb** - Ticket-Buchungssystem
-- 📢 **Promoter Dashboard** - Erstelle und verwalte eigene Events
-- 👤 **User Profile** - Persönliche Daten verwalten
-- 📱 **Responsive Design** - Funktioniert auf allen Geräten
-- ⚡ **Schnelle Performance** - Mit Vite und React
-- 🌐**Funktionierendes deployment auf http://euphorya.net**
+- **Rainbow Design** - Bunte premium Visuals
+- **Authentication** - Login/Register mit Supabase Auth
+- **Rave Discovery** - Entdecke und filtere Events
+- **Warenkorb** - Ticket-Buchungssystem
+- **Promoter Dashboard** - Erstelle und verwalte eigene Events
+- **User Profile** - Persönliche Daten verwalten
+- **Responsive Design** - Funktioniert auf allen Geräten
+- **Schnelle Performance** - Mit Vite und React
+- **Funktionierendes deployment auf http://euphorya.net**
 
 ## Tech Stack
 
