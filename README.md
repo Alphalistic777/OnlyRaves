@@ -4,7 +4,7 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und elektronische Musike
 
 ## Features
 
-- 🌈 **Rainbow Design** - Bunte, kinky und premium Visuals
+- 🌈 **Rainbow Design** - Bunte premium Visuals
 - 🔐 **Authentication** - Login/Register mit Supabase Auth
 - 🎵 **Rave Discovery** - Entdecke und filtere Events
 - 🛒 **Warenkorb** - Ticket-Buchungssystem
