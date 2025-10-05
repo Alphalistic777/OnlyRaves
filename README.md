@@ -128,6 +128,7 @@ src/
 ## Deployment
 
 Funktionierendes deployment auf http://euphorya.net (https sicherheit kommt noch)
+Auch die Seite funktioniert mit der angebundenen Supabase Datenbank.
 
 ## Entwicklung
 
