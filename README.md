@@ -12,6 +12,7 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und elektronische Musike
 - 👤 **User Profile** - Persönliche Daten verwalten
 - 📱 **Responsive Design** - Funktioniert auf allen Geräten
 - ⚡ **Schnelle Performance** - Mit Vite und React
+- 🌐**Funktionierendes deployment auf http://euphorya.net**
 
 ## Tech Stack
 
@@ -27,7 +28,7 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und elektronische Musike
 
 1. Repository klonen:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Alphalistic777/OnlyRaves
 cd onlyraves
 ```
 
