@@ -1,6 +1,6 @@
 # OnlyRaves - Next-gen Ticket-Buchungsseite
 
-Eine moderne, bunte Ticket-Buchungsplattform für Raves und elektronische Musikevents.
+Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 
 ## Features
 
@@ -16,7 +16,7 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und elektronische Musike
 
 ## Tech Stack
 
-- **Frontend**: React 18, TypeScript, Vite
+- **Frontend**: React, TypeScript, Vite
 - **Styling**: Tailwind CSS mit Rainbow-Theme
 - **Authentication**: Supabase Auth
 - **Database**: Supabase PostgreSQL
@@ -142,6 +142,6 @@ Auch die Seite funktioniert mit der angebundenen Supabase Datenbank.
 - Komponenten sind modular und wiederverwendbar
 - Protected Routes für authentifizierte Inhalte
 - Error Handling und Loading States
-- Responsive Design für alle Geräte
+- Responsive Design für alle Geräte (halbwegs)
 
 
