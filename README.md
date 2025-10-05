@@ -1,4 +1,4 @@
-# OnlyRaves - Next-gen Ticket-Buchungsseite
+# OnlyRaves
 
 Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 
