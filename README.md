@@ -119,7 +119,7 @@ src/
 - Alle Raves anzeigen mit Filter-Optionen
 - Rave Details mit allen Informationen
 - In den Warenkorb hinzufügen
-- Nur Promoter können Raves erstellen/löschen
+- User können eigene Raves erstellen/löschen
 
 ### Warenkorb
 - Raves hinzufügen/entfernen
