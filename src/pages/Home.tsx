@@ -38,13 +38,12 @@ export function Home() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                             <Link
                                 to="/raves"
-                                className="btn-primary text-lg px-8 py-4"
+                                className="bg-gradient-to-r from-rainbow-pink to-rainbow-purple text-white text-lg px-8 py-4 rounded-full flex items-center space-x-2 shadow-md hover:scale-105 transition"
                             >
-                <span className="flex items-center space-x-2">
-                  <Music className="w-5 h-5" />
-                  <span>Raves entdecken</span>
-                </span>
+                                <Music className="w-5 h-5" />
+                                <span>Raves entdecken</span>
                             </Link>
+
 
                             {user && (
                                 <Link
