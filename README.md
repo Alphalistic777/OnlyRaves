@@ -23,7 +23,8 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 - **Icons**: Lucide React
 - **Animations**: Framer Motion
 - **Notifications**: React Hot Toast
-
+- **Deployment**: IONOS Webhosting Webspace
+- 
 ## Installation
 
 1. Repository klonen:
