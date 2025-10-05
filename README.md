@@ -29,8 +29,6 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und elektronische Musike
 1. Repository klonen:
 ```bash
 git clone https://github.com/Alphalistic777/OnlyRaves
-cd onlyraves
-```
 
 2. Dependencies installieren:
 ```bash
