@@ -1,6 +1,6 @@
 # OnlyRaves - Next-gen Ticket-Buchungsseite
 
-Eine moderne, bunte und kinky Ticket-Buchungsplattform für Raves und elektronische Musikevents.
+Eine moderne, bunte Ticket-Buchungsplattform für Raves und elektronische Musikevents.
 
 ## Features
 
@@ -51,8 +51,8 @@ npm run build
 Die Supabase Konfiguration ist bereits in `src/utils/supabase.ts` eingebettet:
 
 ```typescript
-const supabaseUrl = 'https://dxduspxozfuyvjtwrujo.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...';
+const supabaseUrl = 'https://xxxx.supabase.co';
+const supabaseAnonKey = 'xxx...';
 ```
 
 ## Projekt Struktur
@@ -150,10 +150,4 @@ Der Build-Ordner kann dann deployed werden.
 - Error Handling und Loading States
 - Responsive Design für alle Geräte
 
-## Lizenz
 
-MIT License - siehe LICENSE Datei für Details.
-
----
-
-**OnlyRaves** - Die nächste Generation der Ticket-Buchungsplattformen für die Rave-Community! 🎉🌈🔥
