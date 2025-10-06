@@ -25,7 +25,7 @@ export function Home() {
                         transition={{ duration: 0.8 }}
                     >
                         <h1 className="text-6xl md:text-8xl font-black mb-6">
-                            <span className="rainbow-text neon-glow">euphorya</span>
+                            <span className="rainbow-text neon-glow">OnlyRaves</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-gray-300 mb-8">
@@ -102,7 +102,7 @@ export function Home() {
                         <div className="text-center">
                             <div className="text-5xl mb-4">🎭</div>
                             <h3 className="text-xl font-semibold mb-2">Anonym & Sicher</h3>
-                            <p className="text-gray-400">Deine Privatsphäre ist uns wichtig. Anonyme Buchungen möglich.</p>
+                            <p className="text-gray-400">Deine Privatsphäre ist uns wichtig. Wir sammeln jegliche Daten über dich und verkaufen sie weiter. Bei Risiken und Nebenwirkungen strangulieren sie ihren Arzt oder Apotheker</p>
                         </div>
 
                         <div className="text-center">
@@ -131,7 +131,7 @@ export function Home() {
                 <div className="max-w-4xl mx-auto text-center px-4">
                     <h2 className="text-4xl font-bold mb-6">Bereit für dein nächstes Abenteuer?</h2>
                     <p className="text-xl text-gray-300 mb-8">
-                        Tausende Raver vertrauen bereits auf OnlyRaves für ihre unvergesslichen Nächte.
+                        Tausende Raver vertrauen bereits auf OnlyRaves für ihre unvergesslichen Nächte (wegen Filmriss du weißt).
                     </p>
 
                     {!user && (

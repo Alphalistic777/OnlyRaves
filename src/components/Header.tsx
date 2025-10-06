@@ -22,7 +22,7 @@ export function Header() {
                     {/* Logo */}
                     <Link to="/" className="flex items-center space-x-2">
                         <div className="w-8 h-8 bg-rainbow-gradient rounded-lg animate-rainbow" />
-                        <span className="text-2xl font-bold rainbow-text">euphorya</span>
+                        <span className="text-2xl font-bold rainbow-text">OnlyRaves</span>
                     </Link>
 
                     {/* Navigation */}

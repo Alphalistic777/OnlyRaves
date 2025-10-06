@@ -136,7 +136,7 @@ export function Register() {
                                     value={formData.username}
                                     onChange={handleChange}
                                     className="w-full pl-9 pr-3 py-2 bg-dark-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-rainbow-pink focus:border-transparent text-white placeholder-gray-400 text-sm"
-                                    placeholder="dein_username"
+                                    placeholder="Username eingeben"
                                     required
                                 />
                             </div>
