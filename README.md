@@ -104,7 +104,7 @@ src/
 
 ## Features Details
 
-### Authentication
+### Authentikation
 - Login/Register mit Email und Passwort
 - Protected Routes für eingeloggte User
 - User Profile mit persönlichen Daten
@@ -131,7 +131,7 @@ src/
 
 ## Entwicklung
 
-### Code Style
+### Code 
 - TypeScript 
 - ESLint 
 - Tailwind CSS für Styling
