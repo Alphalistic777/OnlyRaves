@@ -131,7 +131,7 @@ export function Home() {
                 <div className="max-w-4xl mx-auto text-center px-4">
                     <h2 className="text-4xl font-bold mb-6">Bereit für dein nächstes Abenteuer?</h2>
                     <p className="text-xl text-gray-300 mb-8">
-                        Tausende Raver vertrauen bereits auf OnlyRaves für ihre unvergesslichen Nächte (wegen Filmriss du weißt).
+                        Tausende Raver vertrauen bereits auf OnlyRaves für ihre unvergesslichen Nächte (wegen Filmriss du weißt, jaja).
                     </p>
 
                     {!user && (
