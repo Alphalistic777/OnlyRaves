@@ -10,16 +10,14 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 - **Warenkorb** - Ticket-Buchungssystem
 - **Promoter Dashboard** - Erstelle und verwalte eigene Events
 - **User Profile** - Persönliche Daten verwalten
-- **Responsive Design** - Funktioniert auf allen Geräten
-- **Schnelle Performance** - Mit Vite und React
-- **Funktionierendes deployment auf http://euphorya.net**
+- **Funktionierendes deployment 
 
 - **_Einige designs/router müssen noch angepasst werden, aber basis läuft_**
 
 ## Tech Stack
 
 - **Frontend**: React, TypeScript, Vite
-- **Styling**: Tailwind CSS mit Rainbow-Theme
+- **Styling**: Tailwind CSS 
 - **Authentication**: Supabase Auth
 - **Database**: Supabase PostgreSQL
 - **Icons**: Lucide React
@@ -31,22 +29,18 @@ Eine moderne, bunte Ticket-Buchungsplattform für Raves und Events.
 
 1. Repository klonen:
 
-```
-git clone https://github.com/Alphalistic777/OnlyRaves
-```
-
 2. Dependencies installieren:
 
 ```
 npm install
 ```
 
-3. Development Server starten:
+1. Development Server starten:
 ```
 npm run dev
 ```
 
-4. Build erstellen:
+1. Build erstellen:
 ```bash
 npm run build
 ```
@@ -86,14 +80,14 @@ src/
 
 ## Pages
 
-- **/** - Startseite mit Hero Section und Features
+- **/** - Startseite mit Begrüßung und Buttons
 - **/login** - Anmeldeseite
 - **/register** - Registrierungsseite
 - **/raves** - Alle Raves mit Filter-Optionen
 - **/raves/:id** - Detailansicht eines Raves
 - **/cart** - Warenkorb mit Checkout
-- **/promotion** - Promoter Dashboard zum Erstellen von Events
-- **/profile** - Benutzerprofil und Einstellungen
+- **/promotion** - Promoter Dashboard zum Erstellen von eigenen Events
+- **/profile** - Benutzerprofil sehen und bearbeiten/ ausloggen
 
 ## Design System
 
@@ -114,6 +108,8 @@ src/
 - Login/Register mit Email und Passwort
 - Protected Routes für eingeloggte User
 - User Profile mit persönlichen Daten
+- Automatische Vergabe von IDs für user, rave, cart per Supabase uuid
+
 
 ### Rave Management
 - Alle Raves anzeigen mit Filter-Optionen
@@ -129,21 +125,21 @@ src/
 ## Deployment
 - Funktionierendes deployment auf http://euphorya.net (https sicherheit kommt noch)
 - Auch die Seite funktioniert mit der angebundenen Supabase Datenbank.
-
 - /dist Ornder zum anbinden der Website
+
+-Auch mit Vercel herumprobiert: https://only-raves.vercel.app
 
 ## Entwicklung
 
 ### Code Style
-- TypeScript für Type Safety
-- ESLint für Code Quality
+- TypeScript 
+- ESLint 
 - Tailwind CSS für Styling
 - React Hooks für State Management
 
-### Best Practices
 - Komponenten sind modular und wiederverwendbar
 - Protected Routes für authentifizierte Inhalte
-- Error Handling und Loading States
+- Loading States
 - Responsive Design für alle Geräte (halbwegs)
 
 
