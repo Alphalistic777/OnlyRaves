@@ -48,12 +48,10 @@ export function Home() {
                             {user && (
                                 <Link
                                     to="/promotion"
-                                    className="btn-secondary text-lg px-8 py-4"
+                                    className="bg-gradient-to-r from-rainbow-pink to-rainbow-purple text-white text-lg px-8 py-4 rounded-full flex items-center space-x-2 shadow-md hover:scale-105 transition"
                                 >
-                  <span className="flex items-center space-x-2">
-                    <Sparkles className="w-5 h-5" />
-                    <span>Eigene Raves</span>
-                  </span>
+                                    <Sparkles className="w-5 h-5" />
+                                    <span>Eigene Raves</span>
                                 </Link>
                             )}
                         </div>
