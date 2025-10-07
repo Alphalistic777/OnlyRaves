@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../utils/supabase';
@@ -20,15 +20,7 @@ export function Cart() {
     const { user } = useAuth();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (user) {
-            fetchCartItems();
-        } else {
-            navigate('/login');
-        }
-    }, [user]);
-
-    const fetchCartItems = async () => {
+    const fetchCartItems = useCallback(async () => {
         try {
             const { data, error } = await supabase
                 .from('cart')
@@ -48,7 +40,15 @@ export function Cart() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [user?.id]);
+
+    useEffect(() => {
+        if (user) {
+            fetchCartItems();
+        } else {
+            navigate('/login');
+        }
+    }, [user, fetchCartItems, navigate]);
 
     const removeFromCart = async (raveId: string) => {
         try {

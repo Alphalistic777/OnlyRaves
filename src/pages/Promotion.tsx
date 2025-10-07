@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../utils/supabase';
@@ -35,16 +35,7 @@ export function Promotion() {
         city: '',
     });
 
-    useEffect(() => {
-        if (user) {
-            fetchMyRaves();
-            fetchGenres();
-        } else {
-            navigate('/login');
-        }
-    }, [user]);
-
-    const fetchMyRaves = async () => {
+    const fetchMyRaves = useCallback(async () => {
         try {
             const { data, error } = await supabase
                 .from('rave_data')
@@ -63,7 +54,16 @@ export function Promotion() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [user?.id]);
+
+    useEffect(() => {
+        if (user) {
+            fetchMyRaves();
+            fetchGenres();
+        } else {
+            navigate('/login');
+        }
+    }, [user, fetchMyRaves, navigate]);
 
     const fetchGenres = async () => {
         try {

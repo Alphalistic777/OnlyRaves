@@ -50,8 +50,8 @@ export function Register() {
                 age: parseInt(formData.age),
             });
             navigate('/');
-        } catch (error: any) {
-            setError(error.message || 'Registrierung fehlgeschlagen');
+        } catch (error: unknown) {
+            setError(error instanceof Error ? error.message : 'Registrierung fehlgeschlagen');
         } finally {
             setLoading(false);
         }

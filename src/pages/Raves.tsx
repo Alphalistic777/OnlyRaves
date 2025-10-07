@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../utils/supabase';
 import type { Rave, Genre, FilterOptions } from '../types';
@@ -12,15 +12,6 @@ export function Raves() {
     const [showFilters, setShowFilters] = useState(false);
     const [filters, setFilters] = useState<FilterOptions>({});
     const [filteredRaves, setFilteredRaves] = useState<Rave[]>([]);
-
-    useEffect(() => {
-        fetchRaves();
-        fetchGenres();
-    }, []);
-
-    useEffect(() => {
-        applyFilters();
-    }, [raves, filters]);
 
     const fetchRaves = async () => {
         try {
@@ -56,7 +47,7 @@ export function Raves() {
         }
     };
 
-    const applyFilters = () => {
+    const applyFilters = useCallback(() => {
         let filtered = [...raves];
 
         if (filters.genre) {
@@ -90,7 +81,16 @@ export function Raves() {
         }
 
         setFilteredRaves(filtered);
-    };
+    }, [raves, filters]);
+
+    useEffect(() => {
+        fetchRaves();
+        fetchGenres();
+    }, []);
+
+    useEffect(() => {
+        applyFilters();
+    }, [raves, filters, applyFilters]);
 
     const formatDate = (dateString: string) => {
         return new Date(dateString).toLocaleDateString('de-DE', {
