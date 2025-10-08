@@ -21,8 +21,8 @@ export function Login() {
         try {
             await signIn(email, password);
             navigate('/');
-        } catch (error: any) {
-            setError(error.message || 'Login fehlgeschlagen');
+        } catch (error: unknown) {
+            setError(error instanceof Error ? error.message : 'Login fehlgeschlagen');
         } finally {
             setLoading(false);
         }

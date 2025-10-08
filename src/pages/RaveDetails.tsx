@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../utils/supabase';
 import { useAuth } from '../context/AuthContext';
@@ -25,19 +25,7 @@ export function RaveDetails() {
     const [loading, setLoading] = useState(true);
     const [isOwner, setIsOwner] = useState(false);
 
-    useEffect(() => {
-        if (id) {
-            fetchRave();
-        }
-    }, [id, user]);
-
-    useEffect(() => {
-        if (rave && user) {
-            setIsOwner(rave.user_id === user.id);
-        }
-    }, [rave, user]);
-
-    const fetchRave = async () => {
+    const fetchRave = useCallback(async () => {
         try {
             const { data, error } = await supabase
                 .from('rave_data')
@@ -58,7 +46,19 @@ export function RaveDetails() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [id, navigate]);
+
+    useEffect(() => {
+        if (id) {
+            fetchRave();
+        }
+    }, [id, user, fetchRave]);
+
+    useEffect(() => {
+        if (rave && user) {
+            setIsOwner(rave.user_id === user.id);
+        }
+    }, [rave, user]);
 
     const addToCart = async () => {
         if (!user) {
@@ -77,8 +77,8 @@ export function RaveDetails() {
 
             if (error) throw error;
             toast.success('Rave zum Warenkorb hinzugefügt!');
-        } catch (error: any) {
-            if (error.code === '23505') {
+        } catch (error: unknown) {
+            if (error instanceof Error && 'code' in error && error.code === '23505') {
                 toast.error('Rave bereits im Warenkorb');
             } else {
                 toast.error('Fehler beim Hinzufügen');
